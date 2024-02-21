@@ -20,6 +20,7 @@ set(lib_dir lib)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
 set(EXECUTABLE_OUTPUT_PATH ${exe_dir})
 
 file(GLOB_RECURSE src_files ${CMAKE_CURRENT_SOURCE_DIR}/${src_dir}/allocation.cpp
@@ -37,3 +38,6 @@ if(ENABLE_OMP)
   find_package(OpenMP REQUIRED)
   target_link_libraries(bandwidth-exe PRIVATE OpenMP::OpenMP_CXX)
 endif()
+
+target_link_libraries(bandwidth-exe PRIVATE -static pthread rt -static-libstdc++)
+

@@ -133,7 +133,7 @@ matplotlib.rcParams['grid.linewidth'] = 0.5
 matplotlib.rcParams['grid.color'] = '#000000'
 matplotlib.rcParams['grid.alpha'] = 2./15. # 0.133
 
-matplotlib.rcParams['font.family'] = 'Latin Modern Roman'
+matplotlib.rcParams['font.family'] = 'DeJavu Serif'
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 matplotlib.rcParams['axes.formatter.useoffset'] = False
 
@@ -295,8 +295,8 @@ if len(caches) > 1:
   ax.annotate("RAM", xy=((lastx*xmax)**0.5, top), xycoords='data', xytext=(0., -5.), textcoords='offset points', horizontalalignment='center', verticalalignment='top')
 
 
-ax.grid(b=True, which='major', color="black", alpha=4./30., linewidth=0.5)
-ax.grid(b=True, which='minor', color="black", alpha=1.5/30., linewidth=0.5)
+ax.grid(True, which='major', color="black", alpha=4./30., linewidth=0.5)
+ax.grid(True, which='minor', color="black", alpha=1.5/30., linewidth=0.5)
 
 extra_artists = []
 if args.legend:
